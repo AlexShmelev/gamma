@@ -4,18 +4,13 @@ from pygame.math import Vector2
 
 class APPLE:
   def __init__(self):
-    self.apple_img = pygame.image.load('sprites/apple.png')
+    self.apple_img = pygame.image.load('sprites/apple2.png')
     self.rand_placement()
 
   def draw(self):
     apple_rect = pygame.Rect(self.pos.x * cell_s,self.pos.y * cell_s, cell_s, cell_s)
     self.apple_img = pygame.transform.scale(self.apple_img,(cell_s,cell_s))
-
     screen.blit(self.apple_img,apple_rect)
-
-   # pygame.draw.rect(screen,pygame.Color('red'),apple_rect)
-
-
 
   def rand_placement(self):
     self.x = random.randint(0, cell_a - 1)

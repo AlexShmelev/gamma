@@ -106,12 +106,16 @@ while True:
 
     if event.type == pygame.KEYDOWN:
       if event.key == pygame.K_DOWN:
+        if main_game.snack.direction.y == -1: continue
         main_game.snack.direction = Vector2(0,1)
       if event.key == pygame.K_UP:
+        if main_game.snack.direction.y == 1: continue
         main_game.snack.direction = Vector2(0,-1)
       if event.key == pygame.K_LEFT:
+        if main_game.snack.direction.x == 1: continue
         main_game.snack.direction = Vector2(-1,0)
       if event.key == pygame.K_RIGHT:
+        if main_game.snack.direction.x == -1: continue
         main_game.snack.direction = Vector2(1,0)
 
   main_game.draw()
